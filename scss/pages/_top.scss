@@ -6,6 +6,7 @@
         position: absolute;
         top:50%;
         left:50%;
+        width: 100%;
         transform: translate(-50%,-50%);
         text-align: center;
     
@@ -13,14 +14,18 @@
             font-size: 8rem;
 
             @media screen and(max-width:600px) {
-                font-size: 5.8rem;
+                font-size: 5.5rem;
+
+
             }
+
+            
         }
 
         & .top__sub-title{
             font-size: 1.5rem;
             @media screen and(max-width:600px) {
-                font-size: 1rem; 
+                font-size: .9rem; 
             }
         }
     }
