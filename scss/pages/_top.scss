@@ -13,10 +13,8 @@
         & .top__title{
             font-size: 8rem;
 
-            @media screen and(max-width:600px) {
-                font-size: 5.5rem;
-
-
+            @media screen and(max-width:550px) {
+                font-size: 5rem;
             }
 
             
@@ -24,7 +22,7 @@
 
         & .top__sub-title{
             font-size: 1.5rem;
-            @media screen and(max-width:600px) {
+            @media screen and(max-width:500px) {
                 font-size: .9rem; 
             }
         }

@@ -11,6 +11,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
+  width: 100%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   text-align: center;
@@ -20,9 +21,9 @@
   font-size: 8rem;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 550px) {
   .top__body .top__textarea .top__title {
-    font-size: 5.8rem;
+    font-size: 5rem;
   }
 }
 
@@ -30,9 +31,9 @@
   font-size: 1.5rem;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
   .top__body .top__textarea .top__sub-title {
-    font-size: 1rem;
+    font-size: .9rem;
   }
 }
 
