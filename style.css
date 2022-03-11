@@ -521,8 +521,21 @@
   display: block;
 }
 
-.skill__feature > h3 {
+@media screen and (max-width: 900px) {
+  .skill__feature > img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.skill__feature > h3, .skill__feature h4 {
   text-align: center;
+}
+
+@media screen and (max-width: 900px) {
+  .skill__feature > h3, .skill__feature h4 {
+    font-size: .8rem;
+  }
 }
 
 .skill__title {
