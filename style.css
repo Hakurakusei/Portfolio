@@ -1,0 +1,552 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap");
+.top__body {
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+  height: 100vh;
+}
+
+.top__body .top__textarea {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.top__body .top__textarea .top__title {
+  font-size: 8rem;
+}
+
+@media screen and (max-width: 600px) {
+  .top__body .top__textarea .top__title {
+    font-size: 5.8rem;
+  }
+}
+
+.top__body .top__textarea .top__sub-title {
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 600px) {
+  .top__body .top__textarea .top__sub-title {
+    font-size: 1rem;
+  }
+}
+
+.top__body .top__scroll {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+}
+
+.top__body .top__scroll span {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  /*テキストの形状*/
+  color: black;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  /*縦書き設定*/
+  -ms-writing-mode: tb-rl;
+  -webkit-writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
+}
+
+.top__body .top__scroll::before {
+  content: "";
+  /*描画位置*/
+  position: absolute;
+  bottom: 0;
+  left: -4px;
+  /*丸の形状*/
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: black;
+  /*丸の動き1.6秒かけて透過し、永遠にループ*/
+  -webkit-animation: circlemove 1.6s ease-in-out infinite, cirlemovehide 1.6s ease-out infinite;
+          animation: circlemove 1.6s ease-in-out infinite, cirlemovehide 1.6s ease-out infinite;
+}
+
+.top__body .top__scroll::after {
+  content: "";
+  /*描画位置*/
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  /*線の形状*/
+  width: 2px;
+  height: 50px;
+  background: black;
+}
+
+.top__body.open {
+  opacity: 0;
+}
+
+/*下からの距離が変化して丸の全体が上から下に動く*/
+@-webkit-keyframes circlemove {
+  0% {
+    bottom: 45px;
+  }
+  100% {
+    bottom: -5px;
+  }
+}
+@keyframes circlemove {
+  0% {
+    bottom: 45px;
+  }
+  100% {
+    bottom: -5px;
+  }
+}
+
+/*上から下にかけて丸が透過→不透明→透過する*/
+@-webkit-keyframes cirlemovehide {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes cirlemovehide {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.mv__cover-slide {
+  height: 100vh;
+  width: 100%;
+  background-color: #F4F5F7;
+  position: fixed;
+  -webkit-clip-path: circle(0% at 50% 0%);
+          clip-path: circle(0% at 50% 0%);
+}
+
+.mv__cover-slide .mv__bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: url("images/mv-bg2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.works {
+  width: 100%;
+  height: 95vh;
+  background-color: #F4F5F7;
+  position: relative;
+}
+
+.works .works__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (max-width: 900px) {
+  .works .works__body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.works .works__body .works__left {
+  width: 40%;
+}
+
+@media screen and (max-width: 900px) {
+  .works .works__body .works__left {
+    width: 80%;
+    font-size: .8rem;
+  }
+}
+
+.works .works__body .works__right {
+  width: 50%;
+}
+
+@media screen and (max-width: 900px) {
+  .works .works__body .works__right {
+    width: 80%;
+  }
+}
+
+.works .works__body .works__right .swiper-slide > a > img {
+  width: 100%;
+  height: 80%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.works__title {
+  text-align: center;
+  padding-top: 10px;
+  font-size: 3rem;
+}
+
+@media screen and (max-width: 900px) {
+  .works__title {
+    font-size: 2.5rem;
+  }
+}
+
+.works__detail {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.btn {
+  padding: 1.3em 3em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  -webkit-box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  margin-top: 40px;
+}
+
+.btn:hover {
+  background-color: #2EE59D;
+  -webkit-box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+          box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  -webkit-transform: translateY(-7px);
+          transform: translateY(-7px);
+}
+
+.btn:active {
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
+}
+
+.contact__body {
+  width: 100%;
+  height: 90vh;
+  background-color: black;
+  opacity: 80%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contact__textarea {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+
+.contact__modal-bg {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  opacity: .9;
+  z-index: 5000;
+  display: none;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.contact__modal-bg .contact__modal {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #F4F5F7;
+  opacity: 1;
+  border-radius: 10%;
+  -webkit-animation: fadeIn 0.5s;
+          animation: fadeIn 0.5s;
+}
+
+.contact__modal-bg .contact__modal .modal-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact__modal-bg .contact__modal button {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+}
+
+.contact__modal-bg.hide {
+  display: block;
+}
+
+.form-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+}
+
+.form-box .form-line {
+  margin-top: 3%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+}
+
+.form-box .form-submit {
+  margin-top: 5%;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.about {
+  width: 100%;
+  height: 95vh;
+  margin-top: 100vh;
+  background-color: #F4F5F7;
+  position: relative;
+}
+
+.about .about__inner {
+  height: 100%;
+}
+
+.about .about__body {
+  height: 80%;
+  width: 100%;
+}
+
+.about__title {
+  text-align: center;
+  padding-top: 50px;
+  font-size: 3rem;
+}
+
+@media screen and (max-width: 900px) {
+  .about__title {
+    font-size: 2.5rem;
+  }
+}
+
+.about__profile {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about__profile > img {
+  width: 20%;
+  height: 30%;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 900px) {
+  .about__profile > img {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .about__profile .about__me {
+    font-size: .8rem;
+    width: 80%;
+  }
+}
+
+.about__profile .about__me th {
+  padding-top: 20px;
+}
+
+.about__profile .about__me td {
+  padding-top: 20px;
+  padding-left: 50px;
+}
+
+.skill {
+  width: 100%;
+  height: 95vh;
+  background-color: black;
+  opacity: 80%;
+  position: relative;
+}
+
+.skill__body {
+  height: 85%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 900px) {
+  .skill__body {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.skill__feature {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  opacity: 1;
+  width: 20%;
+  height: 40%;
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 900px) {
+  .skill__feature {
+    -ms-flex-preferred-size: 45%;
+        flex-basis: 45%;
+    height: 35%;
+  }
+}
+
+.skill__feature > img {
+  width: 100px;
+  height: 100px;
+  display: block;
+}
+
+.skill__feature > h3 {
+  text-align: center;
+}
+
+.skill__title {
+  text-align: center;
+  padding-top: 50px;
+  font-size: 3rem;
+  color: white;
+}
+
+@media screen and (max-width: 900px) {
+  .skill__title {
+    font-size: 2.5rem;
+  }
+}
+
+body ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  font-family: 'Merriweather','Sawarabi Mincho', serif;
+}
+/*# sourceMappingURL=style.css.map */

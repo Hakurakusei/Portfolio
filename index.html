@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello,MyPage!</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./scss/vendors/bootstrap-reboot.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+
+    </header>
+    <main>
+        <div class="mv">
+            <div class="mv__cover-slide">
+                <div class="mv__bg">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="contact__modal-bg">
+            <div class="contact__modal">
+                <div class="modal-inner">
+                    <h2>お問い合わせ</h2>
+                    <form class="form-box">
+                        <div class="form-line">
+                            <label for="">mail</label>
+                            <input type="email" name="" id="">
+                        </div>
+                        <div class="form-line">
+                            <label for="">お問い合わせ内容</label>
+                            <textarea name="" id="" cols="30" rows="10">
+                            </textarea>
+                        </div>
+                        
+                        <input class="form-submit" type="submit" value="送信">
+                    </form>
+                </div>
+                <button class="close-btn">X</button>
+                
+            </div>
+        </div>
+        <!-- mainview-->
+        <section class="top">
+            <div class="top__body">
+                <ul class="top__textarea">
+                    <li>
+                        <h1 class="top__title">Im a Web Creater.</h1>
+                    </li>
+                    <li>
+                        <h2 class="top__sub-title">I give Beautiful Web Sites, If you hope it.</h2>
+                    </li>
+                </ul>
+                <div class="top__scroll">
+                    <span>Scroll</span>
+                </div>
+            </div>
+        </section>
+        <section class="about">
+            <div class="about__inner">
+                <div class="about__body">
+                    <h2 class="about__title">About</h2>
+                    <div class="about__profile">
+                        <img class="about__img" src="images/about-my.png" alt="">
+                        <table class="about__me">
+                            <tr>
+                                <th>名前</th>
+                                <td>Lan</td>
+                            </tr>
+                            <tr>
+                                <th>所在地</th>
+                                <td>宮城県仙台市宮城野区</td>
+                            </tr>
+                            <tr>
+                                <th>趣味</th>
+                                <td>PCゲーム<br>
+                                    お酒</td>
+                            </tr>
+                            <tr>
+                                <th>経歴</th>
+                                <td>2020年4月~2021年3月　白石高等技術専門校を次席で卒業<br>
+                                    2021年4月~2021年12月　自治体向けシステム開発に携わる<br>
+                                    2021年1月~　Web制作フリーランスとして活動開始</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="skill">
+            <h2 class="skill__title">Skills</h2>
+            <div class="skill__body">
+                <div class="skill__feature">
+                    <img src="./images/html-5.svg" alt="">
+                    <h3>HTML5</h3>
+                    <h4>★★★★☆</h4>
+                    <p></p>
+                </div>
+                <div class="skill__feature">
+                    <img src="./images/sass.svg" alt="">
+                    <h3>SaSS</h3>
+                    <h4>★★★☆☆</h4>
+                </div>
+                <div class="skill__feature">
+                    <img src="./images/javascript.svg" alt="">
+                    <h3>JavaScript</h3>
+                    <h4>★★★★☆</h4>
+                </div>
+                <div class="skill__feature">
+                    <img src="./images/wordpress-icon.svg" alt="">
+                    <h3>WordPress</h3>
+                    <h4>★★★☆☆</h4>
+                </div>
+            </div>
+        </section>
+        <section class="works">
+            <div class="works__body">
+                <div class="works__left">
+                    <h2 class="works__title">Works</h2>
+                    <p class="works__detail">デザインカンプからWebサイトを構築した制作物です。<br>
+                        実務で作成したページも含まれています。<br>
+                        </p>
+                </div>
+                <div class="works__right">
+                    <div class="works-items swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="images/lp1.png" alt="">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="https://bbb-englishschool.netlify.app">
+                                    <img src="images/lp2.png" alt="">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="https://peaceful-yonath-89e5d7.netlify.app">
+                                    <img src="images/lp3.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contact">
+            <div class="contact__body">
+                <ul class="contact__textarea">
+                    <li>
+                        <h2 class="works__title">Contact</h2>
+                    </li>
+                    <li>
+                        <p class="works__detail">ご連絡はこちらから</p>
+                    </li>
+                    <li>
+                        <button class="btn">
+                        Click Here
+                    </button></li>
+                </ul>
+            </div>
+        </section>
+        
+    </main>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
