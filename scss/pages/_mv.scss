@@ -1,5 +1,5 @@
 .mv__cover-slide{
-    height:100vh;
+    height:100%;
     width:100%;
     background-color: #F4F5F7;
     position: fixed;
@@ -12,21 +12,6 @@
         background-image:url("images/mv-bg2.jpg");
         background-repeat: no-repeat;
         background-size:cover;
-        
-    
-        // &::before{
-        //     content: '';
-        //     position: absolute;
-        //     top:0;
-        //     left: 0;
-        //     width: 100%;
-        //     height:100%;
-        //     background-color: black;
-        //     opacity: 57%;
-        // }
-
-        
-        
     }
 }
 
