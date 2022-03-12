@@ -212,16 +212,6 @@
      object-fit: cover;
 }
 
-.works .works__body .works__right .swiper-slide {
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s;
-  overflow: hidden;
-}
-
 .works .works__body .works__right .swiper-slide::before {
   content: "";
   position: absolute;
@@ -243,11 +233,6 @@
 
 .works .works__body .works__right .swiper-slide:hover::before {
   background-color: rgba(0, 0, 0, 0.4);
-}
-
-.works .works__body .works__right .swiper-slide:hover {
-  -webkit-transform: scale(1.1) !important;
-          transform: scale(1.1) !important;
 }
 
 .works__title {
@@ -640,9 +625,9 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -659,14 +644,16 @@
 }
 
 .about__profile > img {
-  width: 20%;
-  height: 30%;
+  max-width: 200px;
+  max-height: 200px;
   border-radius: 50%;
+  margin-top: 30px;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 600px) {
   .about__profile > img {
-    width: 30%;
+    max-width: 150px;
+    max-height: 150px;
   }
 }
 

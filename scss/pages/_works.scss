@@ -38,9 +38,6 @@
             }
 
             & .swiper-slide{
-                transform: scale(1);
-                transition: transform 0.5s;
-                overflow: hidden;
                 &::before {
                     content: "";
                     position: absolute;
@@ -58,9 +55,6 @@
                 }
                 &:hover::before {
                 background-color: rgba(0, 0, 0, 0.4);
-                }
-                &:hover{
-                    transform: scale(1.1) !important;
                 }
             }
         }
