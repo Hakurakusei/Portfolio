@@ -44,10 +44,29 @@ pagination: {
 
 });
 
-const btn = document.querySelector(".btn");
-btn.addEventListener('click',function(){
-   document.querySelector('.contact__modal-bg').classList.toggle('hide');
-});
+const els = document.querySelectorAll('.observe');
+const cb = function (entries, observer) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('inview');
+            observer.unobserve(entry.target);
+        } else {
+        }
+    });
+};
+const options = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0
+};
+const io = new IntersectionObserver(cb, options);
+els.forEach(el => io.observe(el));
+
+
+// const btn = document.querySelector(".btn");
+// btn.addEventListener('click',function(){
+//    document.querySelector('.contact__modal-bg').classList.toggle('hide');
+// });
 
 const cbtn = document.querySelector(".close-btn");
 cbtn.addEventListener('click',function(){

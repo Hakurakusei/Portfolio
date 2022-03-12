@@ -31,6 +31,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    opacity: 0;
+
+    &.inview{
+        animation:fadeIn 1s;
+        animation-fill-mode: forwards;
+        animation-delay: 0.5s;
+    }
 
     & > img{
         width:20%;
@@ -57,4 +64,14 @@
         }
     }
    
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
 }

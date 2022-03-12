@@ -27,19 +27,26 @@
                     <h2>お問い合わせ</h2>
                     <form class="form-box">
                         <div class="form-line">
-                            <label for="">mail</label>
+                            <label for="">お名前</label>
+                            <input type="text" name="" id="">
+                        </div>
+                        <div class="form-line">
+                            <label for="">電話番号</label>
+                            <input type="tel" name="" id="">
+                        </div>
+                        <div class="form-line">
+                            <label for="">メール</label>
                             <input type="email" name="" id="">
                         </div>
                         <div class="form-line">
-                            <label for="">お問い合わせ内容</label>
-                            <textarea name="" id="" cols="30" rows="10">
-                            </textarea>
+                            <label for="" class="label2"><span>お問い合わせ</span><span>内容</span></label>
+                            <textarea name="" id=""></textarea>
                         </div>
                         
                         <input class="form-submit" type="submit" value="送信">
                     </form>
                 </div>
-                <button class="close-btn">X</button>
+                <button class="close-btn"><i class="ai-cross"></i></button>
                 
             </div>
         </div>
@@ -63,12 +70,12 @@
             <div class="about__inner">
                 <div class="about__body">
                     <h2 class="about__title">About</h2>
-                    <div class="about__profile">
+                    <div class="about__profile observe">
                         <img class="about__img" src="images/about-my.png" alt="">
                         <table class="about__me">
                             <tr>
                                 <th>名前</th>
-                                <td>Lan</td>
+                                <td>高橋 光</td>
                             </tr>
                             <tr>
                                 <th>所在地</th>
@@ -76,7 +83,8 @@
                             </tr>
                             <tr>
                                 <th>趣味</th>
-                                <td>PCゲーム<br>
+                                <td>ゲーム<br>
+                                    プログラミング<br>
                                     お酒</td>
                             </tr>
                             <tr>
@@ -93,23 +101,23 @@
         <section class="skill">
             <h2 class="skill__title">Skills</h2>
             <div class="skill__body">
-                <div class="skill__feature">
+                <div class="skill__feature observe">
                     <img src="./images/html-5.svg" alt="">
                     <h3>HTML5</h3>
                     <h4>★★★★☆</h4>
                     <p></p>
                 </div>
-                <div class="skill__feature">
+                <div class="skill__feature observe">
                     <img src="./images/sass.svg" alt="">
                     <h3>SaSS</h3>
                     <h4>★★★☆☆</h4>
                 </div>
-                <div class="skill__feature">
+                <div class="skill__feature observe">
                     <img src="./images/javascript.svg" alt="">
                     <h3>JavaScript</h3>
                     <h4>★★★★☆</h4>
                 </div>
-                <div class="skill__feature">
+                <div class="skill__feature observe">
                     <img src="./images/wordpress-icon.svg" alt="">
                     <h3>WordPress</h3>
                     <h4>★★★☆☆</h4>
@@ -158,15 +166,18 @@
                         <p class="works__detail">ご連絡はこちらから</p>
                     </li>
                     <li>
-                        <button class="btn">
-                        Click Here
-                        </button>
+                        <a href="https://forms.gle/zfUmJsRetkV1neyJ6">
+                            <button class="btn">
+                                Click here
+                            </button>
+                        </a>
                     </li>
                 </ul>
             </div>
         </section>
         
     </main>
+    <script src="https://unpkg.com/akar-icons-fonts"></script>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>
